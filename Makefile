@@ -4,15 +4,15 @@ INCS=-I/usr/include/stk
 DBGCFLAGS=-g -Wall -DDBG
 SPECLIBS=-lstk
 
-# looking for uov? chekc the juegoca repository
-
-EXECUTABLES=ex0 ex0v sineosc
+EXECUTABLES=ex0 ex0v sineosc foursine
 
 ex0: ex0.cpp
 	${CC} ${CFLAGS} $(INCS) -o $@ $^ $(SPECLIBS)
 ex0v: ex0v.cpp
 	${CC} ${CFLAGS} $(INCS) -o $@ $^ $(SPECLIBS)
 sineosc: sineosc.cpp
+	${CC} ${CFLAGS} $(INCS) -o $@ $^ $(SPECLIBS)
+foursine: foursine.cpp
 	${CC} ${CFLAGS} $(INCS) -o $@ $^ $(SPECLIBS)
 
 .PHONY: clean
